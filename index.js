@@ -3,7 +3,7 @@ const url = require('url')
 
 const server = http.createServer((req, res) => {
     const parsedUrl = url.parse(req.url)
-    const path = parsedUrl.path.replace(/^\/+|\/+$/g, '')
+    const path = parsedUrl.pathname.replace(/^\/+|\/+$/g, '')
 
     req.on('data', () => {})
 
